@@ -17,7 +17,7 @@ body {
   width: 400px;
   max-width: 90%;
   border-radius: 10px;
-  /* border: 2px solid black; */
+
   text-align: center;
   padding: 5px;
 }
@@ -37,8 +37,6 @@ img {
   width: 100%;
 }
 
-/* Wrapper for individual icons */
-/* Wrapper for individual icons */
 .icon-wrapper {
   position: relative;
   overflow: hidden;
@@ -50,29 +48,26 @@ img {
   cursor: pointer;
 }
 
-/* Create a border that animates upwards */
 .icon-wrapper::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Initially at the bottom */
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: red;
-  transform: translateY(5px); /* Hidden below initially */
-  opacity: 0; /* Invisible initially */
+  transform: translateY(5px);
+  opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hover effect - move border upwards */
 .icon-wrapper:hover::after {
-  transform: translateY(-5px); /* Moves up */
-  opacity: 1; /* Becomes visible */
+  transform: translateY(-5px);
+  opacity: 1;
 }
 
-/* Keep the last active icon highlighted */
 .icon-wrapper.active::after {
-  transform: translateY(-5px); /* Stay at the top */
+  transform: translateY(-5px);
   opacity: 1;
 }
 
@@ -86,7 +81,6 @@ img {
   color: red;
 }
 
-/* Prevent conflicts with other icon styles */
 #bottomContainer i {
   padding: 4px;
 }

@@ -4,12 +4,11 @@ let info = document.querySelector(".info");
 let userInfo = document.querySelector(".userInfo");
 let img = document.querySelector("#imageContainer");
 
-// Function to fetch new user data
 const fetchAPI = async () => {
   // Show loading text before fetching data
   info.innerText = "Fetching user details...";
   userInfo.innerText = "Please wait...";
-  img.src = "https://dummyimage.com/150x150/cccccc/ffffff.png&text=Loading"; // Placeholder image
+  img.src = "https://dummyimage.com/150x150/cccccc/ffffff.png&text=Loading"; //
 
   try {
     const response = await fetch(api);
@@ -20,14 +19,12 @@ const fetchAPI = async () => {
       userInfo.innerText = `${randomData.results[0].name.first} ${randomData.results[0].name.last}`;
     }
 
-    // Update image immediately after fetching data
     img.src = `${randomData.results[0].picture.large}`;
 
     fonts.forEach((element, index) => {
       element.addEventListener("mouseenter", () => {
         fonts.forEach((el) => el.classList.remove("active"));
 
-        // Add "active" class to the clicked icon
         element.classList.add("active");
         switch (index) {
           case 0:
